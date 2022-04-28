@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="div calculator">
+      <div class="inputPropina">
+        <p for="bill">Bill</p>
+        <img src="images/icon-dollar.svg" alt="dollar">
+        <input class="number" type="number" value="0"
+        min="1" required step="0.01">
+        
+      </div> <!-- Primera caja -->
+      <div class="selectTipe">
+        <p>Select Tip %</p>
+        <div class="inputPorcentajes">
+          <input type="button" class="btn" value="5%">
+          <input type="button" class="btn" value="10%">
+          <input type="button" class="btn" value="15%">
+          <input type="button" class="btn" value="25%">
+          <input type="button" class="btn" value="50%">
+          <input type="button" class="btn custom" value="Custom">
+        </div>
+      </div> <!-- Segunda Caja -->
+      <div class="numberPeople">
+        <p>Number of People</p>
+        <img src="images/icon-person.svg" alt="person">
+        <input class="numbersPerson" type="number" value="1" min="1" max="50">
+      </div>
+    </div> <!-- Tercera caja -->
+    <div class="div result">
+      <div class="amountPerson">
+        <p>Tip Amount</p>
+        <p class="person">/ person</p>
+		<span class="tipAmount num"></span>
+      </div>
+      <div class="totalPerson">
+        <p>Total</p>
+        <p class="person">/ person </p>
+		<span class="total num"></span>
+      </div>
+      <div class="reset">
+        <input type="button" value="RESET" class="res">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

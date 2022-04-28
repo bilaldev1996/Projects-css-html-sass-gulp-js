@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    box-sizing: content-box;
+    padding: 0;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    background: hsl(184, 14%, 56%);
+}
+
+.container{
+    width: 60%;
+    margin-top: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background: white;
+    height: 25rem;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.div{
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.calculator{
+    background: inherit;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+.calculator p{
+    font-size: 20px;
+    color: hsl(184, 14%, 56%);
+}
+.number,.numbersPerson{
+    width: 100%;
+    height: 2rem;
+    background: hsl(185, 41%, 84%);
+    border: none;
+    color: hsl(183, 100%, 15%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: right;
+}
+.inputPorcentajes{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+.selectTipe p{
+    margin-bottom: 2rem;
+}
+.btn{
+    border: none;
+    background: hsl(183, 100%, 15%);
+    height: 2rem;
+    border-radius:.3rem ;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+.active{
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+.res:hover{
+    background-color: hsl(172, 63%, 76%);
+    color: hsl(183, 100%, 15%);
+}
+.numberPeople{
+    position: relative;
+}
+.numberPeople img{
+    position: absolute;
+    left: .7rem;
+    bottom: 2.2rem;
+}
+.inputPropina{
+    position: relative;
+}
+.inputPropina img{
+    position: absolute;
+    left: .7rem;
+    bottom: 2.2rem;
+}
+.numberPeople img{
+    position: absolute;
+    right: 6rem;
+    bottom: 2.2rem;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0;
+}
+.custom{
+    color: gray;
+    background: hsl(187, 39%, 91%);
+}
+.result{
+    background: hsl(183, 100%, 15%);
+}
+.result p {
+    color: white;
+    font-size: 17px;
+}
+.person{
+    font-size: 16px;
+    color: hsl(186, 14%, 43%) !important;
+}
+.amountPerson{
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    position: relative;
+}
+.totalPerson{
+    margin-bottom: 6rem;
+    position: relative;
+}
+.num{
+    color:hsl(172, 67%, 45%) ;
+    font-weight: 500;
+    font-size: 50px;
+    margin-left: 8rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.res{
+    border: none;
+    width: 80%;
+    height: 3rem;
+    background: hsl(172, 67%, 45%);
+    cursor: pointer;
+    margin-left: 2rem;
+    border-radius: .5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: hsl(183, 100%, 15%);
+}

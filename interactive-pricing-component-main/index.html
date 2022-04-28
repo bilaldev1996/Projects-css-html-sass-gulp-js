@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+			<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+			<title>Frontend Mentor | Interactive pricing component</title>
+			<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet"> 
+			<link rel="stylesheet" href="styles/styles.css">
+			<script src="scripts/scripts.js"></script>
+		</head>
+		<body>
+			<header class="header">
+				<h1>Simple, traffic-based pricing</h1>
+				<p>Sign-up for our 30-day trial</p>
+				<p>No credit card required. </p>
+			</header>
+			<main class="main">
+				<div class="head">
+					<h3 class="pageviews"><span class="numbersPage"></span> Pageviews</h3>
+					<!-- Progress bar -->
+					<progress class="progressbar" max="100" value="0"></progress>
+					<!-- <button class="slid">
+						<img src="./images/icon-slider.svg" alt="">
+					</button> -->
+					<div class="botones">
+						<button class="slid">20%</button><button class="slid">40%</button><button class="slid">60%</button>
+						<button class="slid">80%</button>
+						<button class="slid">100%</button>
+					</div>
+					<p class="price"><span class="prices"></span><span class="year month">/ month</span></p>
+				</div>
+				<div class="div2">
+					<span>Monthly Billing</span>
+					<div class="change">
+						<button type="button" value="" class="boton" id="boton"><div class="bola"></div></button>
+					</div>
+					<span>Yearly Billing</span>
+					<span class="descuento">-25%</span>
+				</div>
+			</main>
+			<footer class="footer">
+				<ul>
+					<li>Unlimited websites</li>
+					<li>100% data ownership</li>
+					<li>Email reports</li>
+				</ul>
+				<input type="button" value="Start my trial" class="start" id="start">
+			</footer>	
+		</body>
+</html>

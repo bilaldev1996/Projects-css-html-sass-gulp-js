@@ -1,0 +1,83 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'base/utilidades';
+
+/* Main */
+.main{
+    text-align: center;
+
+    .contenedor{
+        display: flex;
+        flex-direction: column-reverse;
+        @include m.tablet { 
+            display: grid;
+            grid-template-columns: .6fr 1fr;
+            width: 100%;
+        }
+        @include m.tabletMediana { 
+            display:flex;
+        }
+
+        .contenido{
+            display: grid;
+            grid-template-rows: repeat(3,1fr);
+            gap: 2rem;
+            overflow: hidden;
+            align-items: center;
+            padding: 2rem;
+
+            @include m.tablet { 
+                grid-template-rows:unset;
+                /* display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5rem; */
+                padding: 7rem;
+                p{
+                    text-align: left;
+                    padding: 0 2rem;
+                }
+            }
+
+            .facil,.seguro,.administrable{
+                border: 1px solid gray;
+                box-shadow: 0 0 10px gray;
+                transition: transform 1s;
+                width: 99%;
+
+                &:hover{
+                    transform: scale(1.2);
+                }
+
+                h3{
+                    color: v.$primario;
+                }
+            }
+            :last-of-type{
+                margin-bottom: 2rem;
+            }
+        }
+        .imagen-main{
+            margin-top: v.$separacion;
+            max-width: 100%;
+            height: 110rem;
+            background-image: url('/build/img/app_2.svg');
+            background-repeat:no-repeat ;
+            background-position: top center;
+            background-size: 100%;
+
+            @include m.tablet { 
+                margin: 0;
+                width: 50rem;
+                height: 80rem;
+                background-size: 70%;
+                background-position: top center;
+            }
+            @include m.tabletMediana { 
+                width:100%;
+                background-size:46%;
+            }
+        }
+    }
+}
+

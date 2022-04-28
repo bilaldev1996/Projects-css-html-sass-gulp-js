@@ -1,0 +1,70 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+/* Section nucleus safe */
+.safeNucleus{
+    background-color: v.$primario;
+    text-align: center;
+    color: v.$blanco;
+    margin: 0;
+    width: 100%;
+    margin-top: v.$separacion;
+    @include m.tablet { 
+        .content{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin: 0 13rem;
+        }
+    }
+    @include m.tabletMediana { 
+        .content{
+            display:flex;
+            grid-template-columns: unset;
+            flex-wrap: wrap;
+        }
+    }
+    h1{
+        padding-top: 6rem;
+        margin: 0;
+        padding-bottom: 3rem;
+        font-size: 7rem;
+    }
+    
+
+    .contenido{
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem;
+        p{
+            text-align: left;
+            color: v.$negro;
+            padding: 2.5rem;
+            background: v.$blanco;
+            border: 1px solid gray;
+            box-shadow: 0 0 2px gray;
+            transition: transform 1s;
+
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.2);
+            }
+        }
+        :last-of-type{
+            margin-bottom: v.$separacion;
+        }
+    }
+    .imagenSection1{
+        background-image: url(/build/img/seguridad.png);
+        width: 100%;
+        height: 40rem;
+        background-size: 40rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include m.tablet { 
+            height:45rem;
+            background-size:46rem;
+        }
+    }
+
+}
+

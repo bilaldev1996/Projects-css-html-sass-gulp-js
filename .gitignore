@@ -1,0 +1,5 @@
+**/**/*.md
+/10-nucleus-eWallet/node_modules
+/.vscode
+**/src/img
+**/**/recaptcha.html

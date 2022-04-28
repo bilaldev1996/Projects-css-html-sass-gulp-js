@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="js/scripts.js"></script>
+</head>
+<body><!--  -->
+  <div class="container">
+      <div class="contenedor-principal" id="contenedor-principal">
+        <div class="titleFirst">
+          <img src="images/image-jeremy.png" alt="Imagen jeremy">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
+        <div class="list">
+          <ul>
+            <li><a href="#" id="daily" class="enlace">Daily</a></li>
+            <li><a href="#" id="weekly" class="enlace">Weekly</a></li>
+            <li><a href="#" id="monthly" class="enlace">Monthly</a></li>
+          </ul>
+        </div> 
+      </div> <!-- Contenedor principal -->
+      <div class="contenedor-cards" id="contenedor-cards">
+        <div class="conjuntoWork">
+          <div class="encabezadoWork">
+            <img src="images/icon-work.svg" class="imagen" alt="icono job">
+          </div>
+          <div class="work card active" id="work">
+            <h4 class="title">Work</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+            <h1 class="current"></h1>
+            <p class="previous"></p>
+          </div>
+        </div>
+        <div class="conjuntoPlay">
+          <div class="encabezadoPlay">
+            <img src="images/icon-play.svg" class="imagen" alt="Imagen play">
+          </div>
+          <div class="play card active" id="play">
+            <h4 class="title">Play</h4>
+            <img src="images/icon-ellipsis.svg"  alt="">
+            <h1 class="current"></h1>
+            <p class="previous"></p>
+          </div>
+        </div>
+        <div class="conjuntoStudy">
+          <div class="encabezadoStudy">
+            <img src="images/icon-study.svg" class="imagen" alt="Imagen study">
+          </div>
+          <div class="study card active" id="study">
+            <h4 class="title">Study</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+            <h1 class="current"></h1>
+            <p class="previous"></p>
+          </div>
+        </div>
+        <div class="conjuntoExercise">
+            <div class="encabezadoExercise">
+              <img src="images/icon-exercise.svg" class="imagen" alt="Imagen exercise">
+            </div>
+            <div class="exercise card active" id="exercise">
+              <h4 class="title">Exercise</h4>
+              <img src="images/icon-ellipsis.svg" alt="">
+              <h1 class="current"></h1>
+              <p class="previous"></p>
+            </div>
+          </div>
+        <div class="conjuntoSocial">
+            <div class="encabezadoSocial">
+              <img src="images/icon-social.svg" class="imagen" alt="Imagen social">
+            </div>
+            <div class="social card active" id="social">
+              <h4 class="title">Social</h4>
+              <img src="images/icon-ellipsis.svg" alt="">
+              <h1 class="current"></h1>
+              <p class="previous"></p>
+            </div>
+          </div>
+        <div class="conjuntoSelfCare">
+          <div class="encabezadoSelfCare">
+            <img src="images/icon-self-care.svg" class="imagen" alt="Imagen selfCare">
+          </div>
+          <div class="selfCare card active" id="selfCare">
+            <h4 class="title">Self Care</h4>
+            <img src="images/icon-ellipsis.svg" alt="">
+            <h1 class="current"></h1>
+            <p class="previous"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

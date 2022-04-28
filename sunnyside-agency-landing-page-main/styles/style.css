@@ -1,0 +1,196 @@
+*{
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* font-family: 'Barlow', sans-serif; 
+- Soft red: hsl(7, 99%, 70%)
+- Yellow: hsl(51, 100%, 49%)
+- Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
+- Dark blue (photography text): hsl(198, 62%, 26%)
+- Dark moderate cyan (footer): hsl(168, 34%, 41%)*/
+body{
+    font-family: 'Fraunces', serif;
+}
+.header{
+    max-width: 100%;
+    height: 35rem;
+    background-image: url('../images/desktop/image-header.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.title-center{
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    font-size: 3rem;
+    color: white;
+}
+.title-left{
+    position: absolute;
+    left: 0;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    color: white;
+}
+.menu{
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    word-spacing: 1rem;
+    text-align: center;
+}
+.menu a{
+    display: inline-block;
+    width: 5rem;
+    padding: .5rem;
+    text-decoration: none;
+    color: white;
+}
+.menu a:hover{
+    background: rgb(91, 216, 232);
+    border-radius: 25%;
+}
+/* Imagen */
+
+.arrow{
+    height: 6rem;
+    position: absolute;
+    left: 49%;
+    top: 30%;
+}
+
+/* main */
+.main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align: left;
+    overflow: hidden;
+}
+.article1,.article2{
+    padding: 6rem;
+}
+
+.main h1{
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+}
+.article1 p,.article2 p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 3rem;
+}
+
+.article1 a{
+    text-decoration: none;
+    color: black;
+    box-shadow:10px 10px yellow;
+}
+.article2 a{
+    text-decoration: none;
+    color: black;
+    box-shadow:10px 10px palevioletred;
+}
+.article3{
+    text-align: center;
+    background-image: url('../images/desktop/image-graphic-design.jpg');
+    background-size: cover;
+    padding-top: 25rem;
+    padding-bottom: 5rem;
+    color: hsl(167, 40%, 24%);
+}
+.article4{
+    color: hsl(198, 62%, 26%);
+    text-align: center;
+    background-size: cover;
+    padding-top: 25rem;
+    padding-bottom: 5rem;
+    background-image: url('../images/desktop/image-photography.jpg');
+}
+.article4 p,.article3 p{
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+.section{
+    text-align: center;
+    padding-top: 8rem;
+    width: 100%;
+    height: 40rem;
+}
+.testimonios{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5rem;
+    margin-bottom: 10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.section h1{
+    margin-bottom: 4rem;
+    color: grey;
+    text-transform: uppercase;
+}
+.testimonios img{
+    border-radius: 50%;
+    margin-bottom: 4rem;
+}
+
+article p{
+    margin-bottom: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.oficio{
+    color: grey;
+    margin-top: 1rem;
+}
+
+.images img{
+    max-width: 100%;
+}
+.images{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.footer{
+    color: hsl(167, 40%, 24%);
+    text-align: center;
+    height: 20rem;
+    width: 100%;
+    background: hsl(168, 67%, 74%);
+}
+.footer h1{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.menuFooter{
+    word-spacing: 5rem;
+    margin-bottom: 5rem;
+}
+.menuFooter a{
+    text-decoration: none;
+    color: hsl(167, 40%, 24%);
+}
+.menuFooter a:hover{
+    color: white;
+}
+
+.icons{
+    word-spacing: 1.5rem;
+}
+.icons a{
+    text-decoration: none;
+    color: hsl(167, 40%, 24%)
+}
+
+.icons svg:hover{
+    cursor: pointer;
+    color:white !important;
+}
+
+

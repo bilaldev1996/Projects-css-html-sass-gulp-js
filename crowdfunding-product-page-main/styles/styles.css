@@ -1,0 +1,311 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body{
+    font-family: 'Commissioner', sans-serif;
+    font-size: 1rem;
+    position: relative;
+    background: hsl(0, 17%, 92%);
+}
+.header{
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-image: url('../images/image-hero-desktop.jpg');
+    height: 19rem;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 3rem;
+    /* position: absolute; */
+}
+.header h1{
+    margin-left: 4rem;
+}
+.menu{
+    display: flex;
+    gap: 3rem;
+    justify-content: flex-end; 
+    margin-right:6rem ;  
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.main{
+    width: 50%;
+    display: grid;
+    grid-template-rows: .8fr .8fr 4fr;
+    gap: 2rem;
+    position: absolute;
+    left: 22rem;
+    top: 20rem;
+}
+.divTitle,.backers,.about{
+    border-radius:.5rem ;
+}
+.divTitle{
+    position: relative;
+    background: white;
+    text-align: center;
+}
+.divTitle .logo{
+    position: absolute;
+    bottom: 13rem;
+    left: 50%;
+}
+.divTitle h1{
+    padding-top: 3rem;
+    font-weight: 700;
+}
+.divTitle p{
+    color: gray;
+    padding: 1rem;
+}
+.divTitle .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.buttons input{
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    color: hsl(176, 72%, 28%);
+    font-weight: 700;
+    border: none;
+}
+.buttons input:hover{
+    color: white;
+    background: hsl(176, 72%, 28%);
+}
+.gradient{
+    width: 11rem;
+    border-radius: 2rem;
+    display: flex;
+    position: relative;
+}
+.gradient svg{
+    position: absolute;
+    color:hsl(176, 72%, 28%) ;
+}
+.gradient input{
+    padding-left: 3rem;
+    height: 1.6rem;
+}
+
+/* Second box */
+.backers{
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 3rem;
+    row-gap: 3rem;
+}
+.backers p{
+    padding-top: .5rem;
+    color: hsl(0, 3%, 69%);
+}
+.backed,.totalBackers{
+    padding-right: 3rem;
+    border-right:1px solid lightgray ;
+}
+.daysLeft,.totalBackers{
+    padding-left: 5rem;
+    border-left:1px solid lightgray ;
+}
+/* Barra de progreso */
+.myProgress {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: hsl(0, 17%, 92%);
+    border-radius:1rem ;
+}
+.myBar {
+    position: absolute;
+    border-radius:1rem ;
+    width: 70%;
+    height: 100%;
+    background-color: hsl(176, 48%, 44%);
+}
+
+/* Third box */
+.about{
+    background-color: white;
+    padding: 2rem;
+}
+.about h1,.about p{
+    padding-bottom: 2rem;
+}
+.about p{
+    color: hsl(0, 1%, 59%);
+}
+.tipsBackers{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    gap: 2rem;
+}
+.tipsBackers section{
+    border: 1px solid hsl(0, 1%, 59%);
+    border-radius: .5rem;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.tipsBackers section h3{
+    font-size: 2rem;
+}
+.tipsBackers section span{
+    color: hsl(176, 50%, 47%);
+    font-weight:500 ;
+}
+.tipsBackers section h3 span{
+    margin-left: .5rem;
+    font-size: .8rem;
+    color: hsl(0, 1%, 59%);
+}
+.tipsBackers section input{
+    font-size: 1rem;
+    border: none;
+    color: white;
+    background: hsl(176, 48%, 44%);
+    padding: 1rem;
+    border-radius:2rem ;
+    width: 25%;
+}
+.tipsBackers section input:hover{
+    cursor: pointer;
+    background-color:hsl(176, 72%, 28%) ;
+}
+/* ### Primary
+
+- Moderate cyan: hsl(176, 50%, 47%)
+- Dark cyan: hsl(176, 72%, 28%)
+
+### Neutral
+
+- Black: hsl(0, 0%, 0%)
+- Dark gray: hsl(0, 0%, 48%) */
+
+/* Modal */
+.modalContainer {
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modalContainer .modalContent {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid lightgray;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 1rem;
+}
+
+.modalContainer .close {
+    color: #aaaaaa;
+    /* float: right; */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.modalContainer .close:hover,
+.modalContainer .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modalContent p{
+    color:hsl(0, 1%, 59%);
+    padding: .5rem;
+}
+
+.selectProject{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    gap: 1rem;
+    position: relative;
+}
+.selectProject div{
+    padding: 1rem;
+    border: 1px solid hsl(0, 1%, 59%);
+    border-radius: 1rem;
+
+}
+.selectProject div label:hover{
+    color: hsl(176, 72%, 28%);
+    cursor: pointer;
+    font-weight: 700;
+}
+.selectProject div span{
+    color: hsl(176, 48%, 44%);
+    font-weight: 700;
+}
+.selectProject p{
+    margin-top: .5rem;
+    margin-left: 1.9rem;
+    color: hsl(0, 1%, 59%);
+}
+
+label{
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+    color: black;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.right{
+    position: absolute;
+    right: 0;
+    margin-right: .8rem;
+    color: black !important;
+}
+.left{
+    color: hsl(0, 1%, 59%) !important;
+}
+
+/* Cambiar color radio button */
+input[type="radio"] {
+    /* remove standard background appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* create custom radiobutton appearance */
+    width: 1rem;
+    height: 1rem;
+    padding: 2px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 1px solid #bbbbbb;
+    background-color: #e7e6e7;
+    border-radius: 50%;
+  }
+  
+  /* appearance for checked radiobutton */
+  input[type="radio"]:checked {
+    background-color: hsl(176, 72%, 28%);
+  }
+  
+

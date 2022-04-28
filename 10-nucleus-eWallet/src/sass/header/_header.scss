@@ -1,0 +1,144 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+/* Header */
+.header{
+    padding-top: 1px;
+    padding: 2rem;
+    text-align: center;
+    background-image: url('/build/img/header_bg.svg');
+    background-repeat: no-repeat;
+    background-size: 10rem;
+    background-position: top right;
+    overflow: hidden;
+    
+    @include m.tablet { 
+        background-size: 79rem;
+        margin: 0;
+    }
+
+    @include m.tabletMediana { 
+        background-size: 58rem;
+    }
+    .barra{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include m.tablet {
+            margin: 0 auto;
+            width: 70%;
+            align-items: unset; 
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            margin-top: 2rem;
+        }
+
+        @include m.tabletMediana { 
+            justify-content:space-around;
+        }
+
+        .logo{
+            width: 10rem;
+            height: 10rem;
+            background-image: url(/build/img/logo.svg);
+            background-size: 10rem;
+            background-repeat: no-repeat;
+            /* margin-left: 5rem; */
+            transition: transform 1s;
+            &:hover{
+                cursor: pointer;
+                transform: rotate(360deg);
+            }
+            @include m.tablet { 
+                margin: 0;
+            }
+        }
+        .navegacion{
+            color: v.$primario;
+            ul{
+                margin-right: 3rem;
+                @include m.tablet { 
+                    display: flex;
+                    gap: 2rem;
+                    width: 52rem;
+                }
+                @include m.tabletMediana { 
+                    justify-content:flex-end;
+                }
+                
+                li a{
+                    color: v.$primario;
+                    @include m.tablet { 
+                        color:v.$blanco;
+                        margin: 1rem;
+                    }
+                    &:hover{
+                        color: v.$primarioClaro;
+                    }
+                }
+            }
+        }
+    }
+    .central{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+        @include m.tablet { 
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap: 4rem;
+            width: 70%;
+        }
+        @include m.tabletMediana { 
+            width:100%;
+            grid-template-columns: .2fr 1fr;
+        }
+        h1{
+            
+            @include m.tablet { 
+                text-align: left;
+            }
+        }
+        input{
+            all: unset;
+            background-color:v.$primario ;
+            width: 100%;
+            padding: 1rem;
+            color: v.$blanco;
+            margin-bottom:v.$separacion ;
+            cursor: pointer;
+            
+
+            &:hover{
+                background-color: v.$primarioClaro;
+            }
+
+            @include m.tablet { 
+                width:50%;
+                margin-right: 31rem;
+            }
+        }
+        .imagen-header{
+            width: 50rem;
+            height: 80rem;
+            background-image: url('/build/img/app_1.svg');
+            background-repeat:no-repeat ;
+            background-size: 70%;
+            background-position: top center;
+
+            @include m.tablet { 
+                margin-top: 3rem;
+                width:50rem;
+                height:50rem;
+                background-size: contain;
+                background-position: top left;
+                
+            }
+        }
+    }
+
+}
+

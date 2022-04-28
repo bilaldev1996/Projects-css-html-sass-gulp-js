@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | [Blogr]</title>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/scripts.js"></script>
+  <!-- <script src="scripts/desplegable.js"></script> -->
+</head>
+<body>
+  <header class="header">
+    <h1>Blogr</h1>
+    <div class="icono">
+      <img src="./images/icon-close.svg" alt="" class="close">
+      <img src="./images/icon-hamburger.svg" alt="icono menu" class="hamburguer">
+    </div>
+    <nav class="nav">
+      <div class="product dropdown">
+        <p class="title">Product</p>
+        <img src="./images/icon-arrow-dark.svg" alt="" class="arrow product">
+        <div class="ocultar product hide">
+          <a href="#" >Overview</a>
+          <a href="#">Pricing</a>
+          <a href="#">Marketplace</a>
+          <a href="#">Features</a>
+          <a href="#">Integrations</a>
+        </div>
+      </div><!-- Lista Product -->
+      <div class="company dropdown">
+        <p class="title">Company</p>
+        <img src="./images/icon-arrow-dark.svg" alt="" class="arrow company">
+        <div class="ocultar company hide">
+          <a href="#">About</a>
+          <a href="#">Team</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+        </div>
+      </div><!-- Elemento company -->
+      <div class="connect dropdown">
+        <p class="title">Connect</p>
+        <img src="./images/icon-arrow-dark.svg" alt="" class="arrow connect">
+        <div class="ocultar connect hide">
+          <a href="#">Contact</a>
+          <a href="#">Newsletter</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div><!-- Elemento connect -->
+      <div class="log">
+        <p>Login</p>
+        <input type="button" value="Sign Up">
+      </div>
+    </nav>
+    <div class="titulo">
+      <h1>A modern publishing platform</h1>
+      <h4>Grow your audience and build your online brand</h4>
+      <input type="button" value="Start for Free">
+      <input type="button" value="Learn More">
+    </div>
+  </header>
+  <main class="main">
+    <h1>Designed for the future</h1>
+    <div class="box1">
+      <div class="imagen">
+        <img src="./images//illustration-editor-mobile.svg" alt="" class="editorDesktop">
+      </div>
+      <div class="left">
+        <h2>Introducing an extensible editor</h2>
+        <p class="firstPargraph">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+          change the looks of a blog.
+        </p>
+        <h2>Robust content management</h2>
+        <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+          by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+        </p>
+      </div>
+    </div><!-- Box 1 -->
+    <div class="box2">
+      <img src="./images/illustration-phones.svg" alt="">
+      <div class="left2">
+        <h1>State of the Art Infrastructure</h1>
+        <p>With reliability and speed in mind, worldwide data listas provide the backbone for ultra-fast connectivity. 
+          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+        </p>
+      </div>
+    </div><!-- Box 2 -->
+    <div class="box3">
+      <div class="im">
+        <img src="./images/illustration-laptop-mobile.svg" alt="" class="laptobMobile">
+      </div>
+      <div class="left3">
+        <article>
+          <h2>Free, open, simple</h2>
+          <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+          </p>
+        </article>
+        <article>
+          <h2>Powerful tooling</h2>
+          <p>Batteries included. We built a simple and straightforward CLI tool that makes         customization and deployment a breeze, but
+            capable of producing even the most complicated sites.
+          </p>
+        </article>
+      </div>
+    </div><!-- Box 3 -->
+  </main><!-- main -->
+  <footer class="footer">
+    <h1>Blogr</h1>
+    <div class="product">
+      <p class="title">Product</p>
+      <div class="lista">
+        <a href="#">Overview</a>
+        <a href="#">Pricing</a>
+        <a href="#">Marketplace</a>
+        <a href="#">Features</a>
+        <a href="#">Integrations</a>
+      </div>
+    </div><!-- Lista Product -->
+    <div class="company">
+      <p class="title">Company</p>
+      <div class="lista">
+        <a href="#">About</a>
+        <a href="#">Team</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+      </div>
+    </div><!-- Elemento company -->
+    <div class="connect">
+      <p class="title">Connect</p>
+      <div class="lista">
+        <a href="#">Contact</a>
+        <a href="#">Newsletter</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <script src="scripts/imagenes.js"></script>
+</body>
+</html>
