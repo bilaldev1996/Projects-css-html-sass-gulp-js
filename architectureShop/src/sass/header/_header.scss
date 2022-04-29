@@ -1,0 +1,117 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header{
+    width: 100%;
+    height: 50rem;
+    background-image: url('/build/img/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: top ;
+    color: v.$blanco;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    @include m.tablet { 
+        background-size: 100%;
+        background-position: center;
+        height: 45rem;
+        position:relative;
+    }
+    .title{
+        h1{
+            padding-top: 2rem;
+            font-size: 3rem;
+            font-weight: 400;
+            @include m.tablet { 
+                font-size:4rem;
+            }
+
+            span{
+                font-weight: 900;
+            }
+        }
+    }
+    .telefono{
+            display:flex;
+            justify-content: center;
+            gap:1rem;
+            @include m.tablet { 
+                padding-top:4rem;
+            }
+        picture{
+            img{
+                margin-top: 1rem;
+                width: 2rem;
+                height:2rem;
+            }
+        }
+        span{
+            padding:0.4rem;
+        }
+    }
+}
+
+.barra{
+    @include m.tablet { 
+        width:93%;
+        padding:0 15rem;
+    }
+    .titleTelefono{
+        @include m.tablet { 
+            display:flex;
+            justify-content: space-between;
+            height: 8rem;
+        }
+    }
+}
+
+
+.navegacion{
+    text-align: center;
+    margin-bottom: 7rem;
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    @include m.tablet { 
+        flex-direction:row;
+        margin-left: 45rem;
+    }
+    a{
+        margin-left: 4rem;
+        font-weight: 700;
+        display: inline-block;
+        width:10rem;
+
+        @include m.tablet { 
+            margin:0;
+            width: 10rem;
+        }
+        &:hover{
+            background: v.$gris;
+        }
+    }
+}
+.eslogan{
+    text-align: center;
+    @include m.tablet { 
+        position:absolute;
+        top: 78%;
+        left: 55%;
+    }
+    h2{
+        font-size: 2rem;
+        margin:0;
+
+        @include m.tablet { 
+            font-size:4rem;
+        }
+    }
+    p{
+        margin: 0;
+        @include m.tablet { 
+            text-align: right;
+        }
+    }
+}
