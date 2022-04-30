@@ -1,0 +1,10 @@
+.mas-info{
+    all: unset;
+    border: 1px solid gray;
+    padding: 0 .5rem;
+    
+    &:hover{
+        cursor: pointer;
+        background:lightgray;
+    }
+}

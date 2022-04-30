@@ -1,0 +1,110 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.notavif.notwebp .footer{
+    background-image: url('/build/img/footer_bg.jpg');
+}
+
+.avif .footer{
+    background-image: url('/build/img/footer_bg.avif');
+}
+.webp .footer{
+    background-image: url('/build/img/footer_bg.webp');
+}
+.footer{
+
+    height: 42rem;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: v.$blanco;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 5rem;
+    .title{
+        h1{
+            padding-top: 2rem;
+            font-size: 3rem;
+            font-weight: 400;
+            @include m.tablet { 
+                font-size:4rem;
+                margin: 3rem;
+            }
+
+            span{
+                font-weight: 900;
+            }
+        }
+    }
+    .telefono{
+        display:flex;
+        justify-content: center;
+        gap:1rem;
+        @include m.tablet { 
+            padding-top:7rem;
+        }
+
+        img{
+            margin-top: 1rem;
+            width: 2rem;
+            height:2rem;
+        }
+        span{
+            padding:0.4rem;
+        }
+
+    }
+
+    .navegacion{
+        text-align: center;
+        margin-right: 1rem;
+        @include m.tablet { 
+            flex-direction:row;
+            margin-left: 45rem;
+        }
+        @include m.tabletGrande { 
+            margin-left:24rem;
+        }
+    }
+
+    .derechos{
+        width: 100%;
+        background: hsl(30, 4%, 21%);
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        gap: .5rem ;
+
+        img{
+            width: 2rem;
+            height: 2rem;
+            margin-top: 1rem;
+        }
+    }
+    .barra{
+        @include m.tablet { 
+            padding: 0 15rem;
+            width: 93%;
+            margin-top: 17rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .titleTelefono{
+            @include m.tablet { 
+                display:flex;
+                justify-content: space-between;
+                height: 8rem;
+            }
+        }
+        @include m.tabletGrande { 
+            width: 93%;
+            padding:0 ;
+        }
+    }
+}
