@@ -5,6 +5,11 @@ const sourcemaps = require('gulp-sourcemaps')
 const postcss = require('gulp-postcss')
 const cssnano = require('cssnano')
 
+/* Javascript */
+const gulp = require('gulp')
+const babel = require('gulp-babel')
+const terser = require('gulp-terser')
+const concat = require('gulp-concat')
 
 //Imagenes
 const avif = require('gulp-avif')
@@ -23,6 +28,7 @@ function css() {
 function dev() {
     watch('src/sass/**/*.scss',css)
     watch('src/img/**/*',imagenes)
+    gulp.watch('./src/js/*.js',gulp.series('babel'))
 }
 function imagenes() {
     return src('src/img/**/*')
@@ -46,6 +52,22 @@ function versionWebp() {
             .pipe(webp(opciones))
             .pipe(dest('build/img'))
 }
+
+/* Javascript */
+gulp.task('babel',()=>{
+    return gulp
+        .src('src/js/*.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(terser())
+        .pipe(concat('scripts-min.js'))
+        .pipe(gulp.dest('build/js'))
+})
+
+/* gulp.task('default',()=>{
+    gulp.watch('./src/js/*.js',gulp.series('babel'))
+}) */
 
 exports.imagenes = imagenes;
 exports.dev = dev;
